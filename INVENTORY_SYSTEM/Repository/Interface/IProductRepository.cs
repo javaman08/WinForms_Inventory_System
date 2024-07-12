@@ -10,6 +10,6 @@ namespace INVENTORY_SYSTEM.Repository
     public interface IProductRepository
     {
         List<Product> GetProducts();
-        Product AddProduct(Product request);
+        void AddProduct(Product request);
     }
 }

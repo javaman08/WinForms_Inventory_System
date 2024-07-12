@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace WinFormsMenuExample
+namespace INVENTORY_SYSTEM
 {
     public static class MenuStateHelper
     {

@@ -47,9 +47,39 @@ namespace INVENTORY_SYSTEM.Repository
             return products;
         }
 
-        public Product AddProduct(Product request)
+        public void AddProduct(Product request)
         {
-            throw new NotImplementedException();
+            using (var conn = new SqlConnection(AppConnection.ConnectionString))
+            {
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"INSERT INTO [dbo].[Product] 
+                            ([ProductCode], [BarCode], [ProductName], [ProductDescription], [ProductCategory], [ReorderQuantity], [PackedWeight], [PackedWidth], [PackedDepth], [Refrigerated]) 
+                            VALUES (@ProductCode, @BarCode, @ProductName, 
+                                    @ProductDescription, @ProductCategory, 
+                                    @ReorderQuantity, @PackedWeight, @PackedWidth, 
+                                    @PackedDepth, @Refrigerated)";
+
+                    cmd.Parameters.AddWithValue("@ProductCode", request.ProductCode);
+                    cmd.Parameters.AddWithValue("@BarCode", request.BarCode);
+                    cmd.Parameters.AddWithValue("@ProductName", request.ProductName);
+                    cmd.Parameters.AddWithValue("@ProductDescription", request.ProductDescription);
+                    cmd.Parameters.AddWithValue("@ProductCategory", request.ProductCategory);
+                    cmd.Parameters.AddWithValue("@ReorderQuantity", request.ReOrderQuantity);
+                    cmd.Parameters.AddWithValue("@PackedWeight", request.PackedWeight);
+                    cmd.Parameters.AddWithValue("@PackedWidth", request.PackedWidth);
+                    cmd.Parameters.AddWithValue("@PackedDepth", request.PackedDepth);
+                    cmd.Parameters.AddWithValue("@Refrigerated", request.Refrigerated);
+
+                    var result = cmd.ExecuteNonQuery();
+
+                }
+            }
         }
     }
 }
