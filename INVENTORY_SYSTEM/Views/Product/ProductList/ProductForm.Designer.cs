@@ -38,15 +38,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbRefrigirated = new System.Windows.Forms.CheckBox();
+            this.txtPackedDepth = new System.Windows.Forms.TextBox();
+            this.txtPackedWidth = new System.Windows.Forms.TextBox();
+            this.txtPackedWeight = new System.Windows.Forms.TextBox();
+            this.txtProductCategory = new System.Windows.Forms.TextBox();
+            this.txtProductDec = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.txtBarcode = new System.Windows.Forms.TextBox();
+            this.txtProductCode = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUpdate = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +70,7 @@
             this.dgvProducts.RowTemplate.Height = 24;
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducts.Size = new System.Drawing.Size(1583, 457);
-            this.dgvProducts.TabIndex = 0;
+            this.dgvProducts.TabIndex = 10;
             // 
             // groupBox1
             // 
@@ -82,15 +82,15 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cbRefrigirated);
+            this.groupBox1.Controls.Add(this.txtPackedDepth);
+            this.groupBox1.Controls.Add(this.txtPackedWidth);
+            this.groupBox1.Controls.Add(this.txtPackedWeight);
+            this.groupBox1.Controls.Add(this.txtProductCategory);
+            this.groupBox1.Controls.Add(this.txtProductDec);
+            this.groupBox1.Controls.Add(this.txtProductName);
+            this.groupBox1.Controls.Add(this.txtBarcode);
+            this.groupBox1.Controls.Add(this.txtProductCode);
             this.groupBox1.Location = new System.Drawing.Point(12, 41);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(980, 154);
@@ -169,71 +169,71 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Product Code";
             // 
-            // checkBox1
+            // cbRefrigirated
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(861, 35);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(104, 20);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Refrigerated";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbRefrigirated.AutoSize = true;
+            this.cbRefrigirated.Location = new System.Drawing.Point(861, 35);
+            this.cbRefrigirated.Name = "cbRefrigirated";
+            this.cbRefrigirated.Size = new System.Drawing.Size(104, 20);
+            this.cbRefrigirated.TabIndex = 9;
+            this.cbRefrigirated.Text = "Refrigerated";
+            this.cbRefrigirated.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // txtPackedDepth
             // 
-            this.textBox8.Location = new System.Drawing.Point(634, 116);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(191, 22);
-            this.textBox8.TabIndex = 3;
+            this.txtPackedDepth.Location = new System.Drawing.Point(634, 116);
+            this.txtPackedDepth.Name = "txtPackedDepth";
+            this.txtPackedDepth.Size = new System.Drawing.Size(191, 22);
+            this.txtPackedDepth.TabIndex = 8;
             // 
-            // textBox7
+            // txtPackedWidth
             // 
-            this.textBox7.Location = new System.Drawing.Point(634, 88);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(191, 22);
-            this.textBox7.TabIndex = 3;
+            this.txtPackedWidth.Location = new System.Drawing.Point(634, 88);
+            this.txtPackedWidth.Name = "txtPackedWidth";
+            this.txtPackedWidth.Size = new System.Drawing.Size(191, 22);
+            this.txtPackedWidth.TabIndex = 7;
             // 
-            // textBox6
+            // txtPackedWeight
             // 
-            this.textBox6.Location = new System.Drawing.Point(634, 60);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(191, 22);
-            this.textBox6.TabIndex = 3;
+            this.txtPackedWeight.Location = new System.Drawing.Point(634, 60);
+            this.txtPackedWeight.Name = "txtPackedWeight";
+            this.txtPackedWeight.Size = new System.Drawing.Size(191, 22);
+            this.txtPackedWeight.TabIndex = 6;
             // 
-            // textBox5
+            // txtProductCategory
             // 
-            this.textBox5.Location = new System.Drawing.Point(136, 116);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(234, 22);
-            this.textBox5.TabIndex = 3;
+            this.txtProductCategory.Location = new System.Drawing.Point(136, 116);
+            this.txtProductCategory.Name = "txtProductCategory";
+            this.txtProductCategory.Size = new System.Drawing.Size(234, 22);
+            this.txtProductCategory.TabIndex = 4;
             // 
-            // textBox4
+            // txtProductDec
             // 
-            this.textBox4.Location = new System.Drawing.Point(136, 88);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(234, 22);
-            this.textBox4.TabIndex = 3;
+            this.txtProductDec.Location = new System.Drawing.Point(136, 88);
+            this.txtProductDec.Name = "txtProductDec";
+            this.txtProductDec.Size = new System.Drawing.Size(234, 22);
+            this.txtProductDec.TabIndex = 3;
             // 
-            // textBox3
+            // txtProductName
             // 
-            this.textBox3.Location = new System.Drawing.Point(136, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(234, 22);
-            this.textBox3.TabIndex = 3;
+            this.txtProductName.Location = new System.Drawing.Point(136, 60);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(234, 22);
+            this.txtProductName.TabIndex = 2;
             // 
-            // textBox2
+            // txtBarcode
             // 
-            this.textBox2.Location = new System.Drawing.Point(502, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(323, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtBarcode.Location = new System.Drawing.Point(502, 32);
+            this.txtBarcode.Name = "txtBarcode";
+            this.txtBarcode.Size = new System.Drawing.Size(323, 22);
+            this.txtBarcode.TabIndex = 5;
             // 
-            // textBox1
+            // txtProductCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 22);
-            this.textBox1.TabIndex = 5;
+            this.txtProductCode.Location = new System.Drawing.Point(136, 32);
+            this.txtProductCode.Name = "txtProductCode";
+            this.txtProductCode.Size = new System.Drawing.Size(184, 22);
+            this.txtProductCode.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -315,15 +315,15 @@
 
         private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtProductName;
+        private System.Windows.Forms.TextBox txtBarcode;
+        private System.Windows.Forms.TextBox txtProductCode;
+        private System.Windows.Forms.CheckBox cbRefrigirated;
+        private System.Windows.Forms.TextBox txtPackedWidth;
+        private System.Windows.Forms.TextBox txtPackedWeight;
+        private System.Windows.Forms.TextBox txtProductCategory;
+        private System.Windows.Forms.TextBox txtProductDec;
+        private System.Windows.Forms.TextBox txtPackedDepth;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

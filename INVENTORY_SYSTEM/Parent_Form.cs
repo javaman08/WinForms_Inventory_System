@@ -3,14 +3,17 @@ using System;
 using System.Windows.Forms;
 using INVENTORY_SYSTEM.Views.Product.ProductList;
 using INVENTORY_SYSTEM.Views.Customer.CustomerList;
+using INVENTORY_SYSTEM.Repository;
 
 namespace INVENTORY_SYSTEM
 {
     public partial class Parent_Form : Form
     {
-        public Parent_Form()
+        IProductRepository _productRepository;
+        public Parent_Form(IProductRepository productRepository)
         {
             InitializeComponent();
+            _productRepository = productRepository; 
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -22,9 +25,12 @@ namespace INVENTORY_SYSTEM
 
         private void productToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProductForm productForm = new ProductForm();
-            productForm.MdiParent = Parent_Form.ActiveForm;
-            productForm.Show();
+            if(!FormHandler.IsFormOpen(typeof(ProductForm)))
+            {
+                ProductForm productForm = new ProductForm(_productRepository);
+                productForm.MdiParent = Parent_Form.ActiveForm;
+                productForm.Show();
+            }            
         }
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)

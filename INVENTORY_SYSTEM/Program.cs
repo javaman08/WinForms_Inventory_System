@@ -1,6 +1,8 @@
 ﻿using Autofac;
+using INVENTORY_SYSTEM.Repository;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,16 +20,17 @@ namespace INVENTORY_SYSTEM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Parent_Form());
+            Container = Configure();
+            Application.Run(new Parent_Form(Container.Resolve<IProductRepository>()));
         }
 
-        //static IContainer Configure()
-        //{
-        //    var builder = new ContainerBuilder();
-        //    builder.RegisterType<DatabaseConnectionProvider>().As<IDatabaseConnectionProvider>();
-        //    builder.RegisterType<Parent_Form>();
+        static IContainer Configure()
+        {
+            var builder = new ContainerBuilder();
+            builder.RegisterType<ProductRepository>().As<IProductRepository>();
+            builder.RegisterType<Parent_Form>();
 
-        //    return builder.Build();
-        //}
+            return builder.Build();
+        }
     }
 }

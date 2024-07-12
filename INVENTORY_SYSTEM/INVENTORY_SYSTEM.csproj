@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\AppConnection.cs" />
+    <Compile Include="Function\FormHandler.cs" />
     <Compile Include="Function\MenuHelper.cs" />
     <Compile Include="Repository\Interface\IProductRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
